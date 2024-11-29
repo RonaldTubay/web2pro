@@ -3,6 +3,11 @@
 // routes/web.php
 
 use App\Http\Controllers\VehiculoController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/vehiculos', [VehiculoController::class, 'indexHtml'])->name('vehiculos.indexHtml');
 Route::get('/vehiculos/create', [VehiculoController::class, 'createHtml'])->name('vehiculos.createHtml');
